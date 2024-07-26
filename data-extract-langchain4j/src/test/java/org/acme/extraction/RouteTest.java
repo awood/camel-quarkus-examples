@@ -17,6 +17,13 @@ import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
+/**
+ * TODO: The routeSchema is not up to date
+ * TODO: Add kubernetes and openshift deployment
+ * TODO: Consume from an unstructured data store
+ * TODO: Correct all TODOs in the example
+ * TODO: Write example instructions
+ */
 @QuarkusTestResource(OllamaTestResource.class)
 @QuarkusTest
 public class RouteTest {
