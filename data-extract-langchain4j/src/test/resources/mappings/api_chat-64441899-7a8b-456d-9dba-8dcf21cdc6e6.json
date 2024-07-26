@@ -1,0 +1,24 @@
+{
+  "id" : "64441899-7a8b-456d-9dba-8dcf21cdc6e6",
+  "name" : "api_chat",
+  "request" : {
+    "url" : "/api/chat",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\n  \"model\" : \"codellama\",\n  \"messages\" : [ {\n    \"role\" : \"user\",\n    \"content\" : \"Extract information about a customer from the text delimited by triple backticks: ```Operator: Hello, how may I help you?\\nCustomer: Hello, I am currently at the police station because I've got an accident. The police would need a proof that I have an insurance. Could you please help me?\\nOperator: Sure, could you please remind me your name and birth date?\\nCustomer: Of course, my name is Kate Hart and I was born on August the thirteen in the year nineteen ninety nine.\\nOperator: I'm sorry Kate, but we don't have any contract in our records.\\nCustomer: Oh, I'm sorry that I've made a mistake. Actually, my last name is not Hart, but Boss. It changed since I'm married.\\nOperator: Indeed, I have now found your contract and everything looks good. Shall I send the proof of insurance to the police station?\\nCustomer: Oh, if possible, my husband will go directly to your office in order to get it.\\nOperator: Yes, that's possible. I will let the paper at the entrance. Your beloved could just ask it to the front desk.\\nCustomer: Many thanks. That's so helpful. I'm a bit more relieved now.\\nOperator: Sure, you're welcome Kate. Please come back to us any time in case more information is needed. Bye.\\nCustomer: Bye.```.The customerBirthday field should be formatted as YYYY-MM-DD.The summary field should concisely relate the customer main ask.\\nYou must answer strictly in the following JSON format: {\\n\\\"customerSatisfied\\\": (type: boolean),\\n\\\"customerName\\\": (type: string),\\n\\\"customerBirthday\\\": (type: date string (2023-12-31)),\\n\\\"summary\\\": (type: string)\\n}\"\n  } ],\n  \"options\" : {\n    \"temperature\" : 0.0,\n    \"top_k\" : 40,\n    \"top_p\" : 0.9\n  },\n  \"format\" : \"json\",\n  \"stream\" : false\n}",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"model\":\"codellama\",\"created_at\":\"2024-07-26T13:48:19.801608167Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n\\\"customerSatisfied\\\": true,\\n\\\"customerName\\\": \\\"Kate Boss\\\",\\n\\\"customerBirthday\\\": \\\"1999-08-13\\\",\\n\\\"summary\\\": \\\"Customer Kate Boss is satisfied with the assistance provided by the operator. The customer was able to provide their name and birth date correctly, and the operator was able to locate their insurance contract.\\\"\\n}\"},\"done_reason\":\"stop\",\"done\":true,\"total_duration\":24668058238,\"load_duration\":832680197,\"prompt_eval_count\":437,\"prompt_eval_duration\":14531965000,\"eval_count\":87,\"eval_duration\":9255347000}",
+    "headers" : {
+      "Date" : "Fri, 26 Jul 2024 13:48:19 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "64441899-7a8b-456d-9dba-8dcf21cdc6e6",
+  "persistent" : true,
+  "insertionIndex" : 2
+}
