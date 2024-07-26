@@ -28,7 +28,7 @@ public interface CustomPojoExtractionService {
     @UserMessage(CUSTOM_POJO_EXTRACT_PROMPT)
     @Handler
     // TODO: It should be possible to remove @V as this is working in data-experiments-camel-quarkus
-    // The issue is still there with q-platform 3.12.0, 3.12.1, 3.12.2, 3.12.3, 3.13.0.CR1 and maven.compiler.target/source = 21
+    // The issue is still there with q-platform 3.12.0/3, 3.13.0.CR1 and maven.compiler.target/source = 21
     CustomPojo extractFromText(@V("text") String text);
     //CustomPojo extractFromText(String text);
 }
