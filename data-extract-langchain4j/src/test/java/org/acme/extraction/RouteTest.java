@@ -23,7 +23,6 @@ import static org.hamcrest.Matchers.not;
  * TODO: Consume from an unstructured data store
  * TODO: Correct all TODOs in the example
  * TODO: Write example instructions
- * TODO: QuarkusTestResource is deprecated
  */
 @WithTestResource(OllamaTestResource.class)
 @QuarkusTest
