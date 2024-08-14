@@ -3,7 +3,7 @@ package org.acme.extraction;
 import java.io.IOException;
 
 import com.github.dockerjava.zerodep.shaded.org.apache.commons.codec.Charsets;
-import io.quarkus.test.common.QuarkusTestResource;
+import io.quarkus.test.common.WithTestResource;
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.RestAssured;
 import io.restassured.config.HttpClientConfig;
@@ -25,7 +25,7 @@ import static org.hamcrest.Matchers.not;
  * TODO: Write example instructions
  * TODO: QuarkusTestResource is deprecated
  */
-@QuarkusTestResource(OllamaTestResource.class)
+@WithTestResource(OllamaTestResource.class)
 @QuarkusTest
 public class RouteTest {
 
