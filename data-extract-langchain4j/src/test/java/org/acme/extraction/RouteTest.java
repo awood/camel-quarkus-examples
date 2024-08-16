@@ -18,11 +18,10 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
 /**
- * TODO: The routeSchema is not up to date
- * TODO: Add kubernetes and openshift deployment
  * TODO: Consume from an unstructured data store
+ * TODO: Add kubernetes and openshift deployment
  * TODO: Correct all TODOs in the example
- * TODO: Write example instructions
+ * TODO: Write example instructions (with a section to update the wiremock mappings)
  */
 @WithTestResource(OllamaTestResource.class)
 @QuarkusTest

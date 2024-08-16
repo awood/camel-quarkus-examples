@@ -168,6 +168,8 @@
                         <showDeprecation>true</showDeprecation>
                         <showWarnings>true</showWarnings>
                         <compilerArgs>
+                            <!-- Specifying -parameters is optional, see CustomPojoExtractionService.extractFromText javadoc -->
+                            <arg>-parameters</arg>
                             <arg>-Xlint:unchecked</arg>
                         </compilerArgs>
                     </configuration>
