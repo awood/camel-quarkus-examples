@@ -16,6 +16,9 @@ public class Routes extends RouteBuilder {
                 .log("Received ${body}")
                 .bean(customPojoExtractionService)
                 .bean(this, "toPrettyFormat");
+
+        fromF("mongodb:myMongoClient?database=transcripts_db&collection=transcripts_collection")
+                .log("!!!!!!!!!!!!!!!! Mongo Received ${body}");
     }
 
     private final static String FORMAT = "{"

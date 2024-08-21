@@ -24,6 +24,7 @@ import static org.hamcrest.Matchers.not;
  * TODO: Write example instructions (with a section to update the wiremock mappings)
  */
 @WithTestResource(OllamaTestResource.class)
+@WithTestResource(MongoDbTestResource.class)
 @QuarkusTest
 public class RouteTest {
 
